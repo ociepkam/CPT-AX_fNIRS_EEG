@@ -1,0 +1,14 @@
+Dziękujemy za ukończenie treningu! Teraz rozpocznie się właściwa część eksperymentu. Zadanie będzie wyglądało dokładnie tak samo, jak w sesji treningowej.
+
+Przypomnienie:
+
+* Na ekranie zobaczysz litery wyświetlane w krótkich odstępach czasu.
+* Twoim zadaniem jest policzenie par, w których najpierw pojawia się litera A, a następnie litera X. Zliczaj wyłącznie te pary.
+
+Ważne:
+
+* Staraj się maksymalnie skupić na zadaniu.
+* Minimalizuj ruchy ciała, zwłaszcza głowy, aby pomiary były jak najbardziej dokładne.
+* Po zakończeniu badania poprosimy Cię o podanie liczby par A-X, które udało Ci się policzyć.
+
+Kiedy będziesz gotowy/-a, wciśnij klawisz spacji, aby rozpocząć główną część eksperymentu.

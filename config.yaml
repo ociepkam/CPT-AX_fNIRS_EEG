@@ -1,0 +1,39 @@
+training: True # True or False depends on if you want to run training
+training_trials: {"A-X": 1, "A-Y": 1, "B-X": 1, "B-Y": 1}
+training_first_time: 0.5
+training_second_time: 12
+training_fixation_time: [1.5, 3.5]
+
+first_fixation: True # True or False depends on if you want to have special fixation at the start of the experiment
+first_fixation_time: 20
+
+experiment_trials: {"A-X": 12, "A-Y": 12, "B-X": 12, "B-Y": 12}
+experiment_first_time: 0.5
+experiment_second_time: 12
+experiment_fixation_time: [1.5, 3.5]
+
+target: "A-X"
+
+# ----------------------- visual ----------------------- #
+stimulus_color: black
+stimulus_size: 60
+
+screen_color: grey
+fixation_color: black
+fixation_text: +
+fixation_size: 60
+
+text_size: 20
+text_color: black
+
+textbox_info_text: "Wpisz liczbę powtórzeń pary A-X i naciśnij Enter:"
+textbox_info_pos: [0, 100]
+
+textbox_size: [50, 50]
+textbox_border_width: 2
+textbox_pos: [0, 0]
+textbox_key: return
+textbox_max_size: 3
+
+
+exit_key: f7

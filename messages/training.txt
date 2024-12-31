@@ -1,0 +1,18 @@
+Witaj! Za chwilę rozpoczniemy krótkie zadanie. Twoim zadaniem będzie obserwowanie liter pojawiających się na ekranie i liczenie określonych par znaków.
+
+Co powinieneś zrobić:
+
+* Na ekranie zobaczysz litery wyświetlane w krótkich odstępach czasu.
+* Twoim zadaniem jest policzenie par, w których najpierw pojawia się litera A, a następnie litera X. Zliczaj wyłącznie te pary.
+
+Ważne:
+
+* Podczas trwania badania staraj się minimalizować ruchy ciała, zwłaszcza głowy.
+* Oddychaj spokojnie i skup swoją uwagę na zadaniu.
+* Po zakończeniu zadania poprosimy Cię o podanie liczby par A-X, które udało Ci się policzyć.
+
+Teraz rozpoczniemy krótką sesję treningową, abyś mógł/mogła zapoznać się z zadaniem. Po niej przejdziemy do właściwego eksperymentu.
+
+Jeśli poczujesz się niekomfortowo, możesz przerwać procedurę w dowolnym momencie – wystarczy zgłosić to osobie prowadzącej badanie.
+
+Kiedy poczujesz się gotowy/-a, wciśnij klawisz spacji, aby rozpocząć sesję treningową.
