@@ -16,6 +16,8 @@ TRAINING_CORRECT = ""
 EXPERIMENT_ANSWER = ""
 EXPERIMENT_CORRECT = ""
 
+LSL_OUTLET = None
+SEND_TRIGGERS = False
 
 @atexit.register
 def save_results():
@@ -28,9 +30,11 @@ def save_results():
         file.write(f"experiment correct: {EXPERIMENT_CORRECT}\n")
 
 
-def draw_stimulus(stimulus, clock, win, stimulus_time):
+def draw_stimulus(stimulus, clock, win, stimulus_time, stimulus_idx):
     stimulus.setAutoDraw(True)
     win.callOnFlip(clock.reset)
+    if SEND_TRIGGERS:
+        win.callOnFlip(LSL_OUTLET.push_sample, x=[int(stimulus_idx)])
     win.flip()
     while clock.getTime() < stimulus_time:
         check_exit()
@@ -48,18 +52,23 @@ def experiment_loop(win, config, block_type, screen_res, clock, fixation, textbo
             fixation_time = config["first_fixation_time"]
         else:
             fixation_time = random.uniform(config[f"{block_type}_fixation_time"][0], config[f"{block_type}_fixation_time"][1])
-        draw_stimulus(stimulus=fixation, clock=clock, win=win, stimulus_time=fixation_time)
-        draw_stimulus(stimulus=trial["first"], clock=clock, win=win, stimulus_time=config[f"{block_type}_first_time"])
-        draw_stimulus(stimulus=trial["second"], clock=clock, win=win, stimulus_time=config[f"{block_type}_second_time"])
+        draw_stimulus(stimulus=fixation, clock=clock, win=win, stimulus_time=fixation_time, stimulus_idx="1" + str(idx))
+        draw_stimulus(stimulus=trial["first"], clock=clock, win=win, stimulus_time=config[f"{block_type}_first_time"],
+                      stimulus_idx="2" + str(idx))
+        draw_stimulus(stimulus=trial["second"], clock=clock, win=win, stimulus_time=config[f"{block_type}_second_time"],
+                      stimulus_idx="3" + str(idx))
 
     textbox.setText("")
     win.callOnFlip(event.clearEvents)
+
     while True:
         textbox_info.draw()
         textbox.draw()
         win.flip()
         keys = event.getKeys()
         if config["textbox_key"] in keys:
+            if SEND_TRIGGERS:
+                win.callOnFlip(LSL_OUTLET.push_sample, x=[int("5" + str(idx))])
             if block_type == "training":
                 TRAINING_ANSWER = textbox.text
                 TRAINING_CORRECT = config["training_trials"][config["target"]]
